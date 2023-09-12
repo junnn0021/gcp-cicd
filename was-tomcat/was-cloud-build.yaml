@@ -18,3 +18,4 @@ substitutions:
   _REPO_NAME: $REGISTRY
   _BRANCH_NAME: main
   _SHORT_SHA: $SHORT_SHA
+  REGISTRY: $WAS
