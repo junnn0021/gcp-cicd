@@ -1,21 +1,21 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$_REGISTRY/$_WAS', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS']
+    args: ['push', 'gcr.io/$PROJECT_ID/$_REGISTRY/$_WAS']
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'artifacts'
       - 'docker'
       - 'tag'
-      - '--src=gcr.io/$PROJECT_ID/$REGISTRY/$WAS'
-      - '--dst=asia-northeast3-docker.pkg.dev/$PROJECT_ID/$REGISTRY/$WAS'
+      - '--src=gcr.io/$PROJECT_ID/$_REGISTRY/$_WAS'
+      - '--dst=asia-northeast3-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/$_WAS'
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'artifacts'
       - 'docker'
       - 'push' 
-      - '-asia-northeast3-docker.pkg.dev/$PROJECT_ID/$REGISTRY/WAS'
+      - '-asia-northeast3-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/_WAS'
 
 options:
   logging: CLOUD_LOGGING_ONLY
