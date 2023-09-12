@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'artifacts'
+      - 'docker'
+      - 'pull'
+      - 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS'
+      - '--tag=us-docker.pkg.dev/$PROJECT_ID/YOUR_REGISTRY/$REGISTRY/$WAS'
