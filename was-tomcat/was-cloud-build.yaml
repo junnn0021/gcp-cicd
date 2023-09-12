@@ -9,13 +9,13 @@ steps:
       - 'docker'
       - 'tag'
       - '--src=gcr.io/$PROJECT_ID/$_REGISTRY/$_WAS'
-      - '--dst=asia-northeast3-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/$_WAS'
+      - '--dst=us-central1-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/$_WAS'
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'artifacts'
       - 'docker'
       - 'push' 
-      - 'asia-northeast3-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/_WAS'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/_WAS'
 
 options:
   logging: CLOUD_LOGGING_ONLY
