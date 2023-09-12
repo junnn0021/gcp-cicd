@@ -9,7 +9,12 @@ steps:
       - 'docker'
       - 'pull'
       - 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS'
-      - '--tag=us-docker.pkg.dev/$PROJECT_ID/YOUR_REGISTRY/$REGISTRY/$WAS'
+      - '--tag=us-docker.pkg.dev/$PROJECT_ID/$REGISTRY/$WAS'
 
 options:
   logging: 'NONE'
+substitutions:
+  _PROJECT_ID: $PROJECT_ID
+  _REPO_NAME: $REGISTRY
+  _BRANCH_NAME: main
+  _SHORT_SHA: $SHORT_SHA
