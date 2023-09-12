@@ -14,8 +14,8 @@ steps:
 options:
   logging: 'NONE'
 substitutions:
-  _PROJECT_ID: $PROJECT_ID
-  _REPO_NAME: $REGISTRY
+  _PROJECT_ID: ${PROJECT_ID}
+  _REPO_NAME: ${REGISTRY}
   _BRANCH_NAME: main
-  _SHORT_SHA: $SHORT_SHA
-  REGISTRY: $WAS
+  _SHORT_SHA: ${SHORT_SHA}
+  REGISTRY: ${WAS}
