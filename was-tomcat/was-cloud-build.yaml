@@ -15,7 +15,7 @@ steps:
       - 'artifacts'
       - 'docker'
       - 'push' 
-      - '-asia-northeast3-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/_WAS'
+      - 'asia-northeast3-docker.pkg.dev/$PROJECT_ID/$_REGISTRY/_WAS'
 
 options:
   logging: CLOUD_LOGGING_ONLY
