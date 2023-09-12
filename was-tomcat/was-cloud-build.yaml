@@ -10,3 +10,6 @@ steps:
       - 'pull'
       - 'gcr.io/$PROJECT_ID/$REGISTRY/$WAS'
       - '--tag=us-docker.pkg.dev/$PROJECT_ID/YOUR_REGISTRY/$REGISTRY/$WAS'
+
+options:
+  logging: 'NONE'
