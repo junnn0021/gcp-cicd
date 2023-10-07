@@ -19,7 +19,7 @@ on:
 env:
   PROJECT_ID: terraform-practice-398008
   GAR_LOCATION: asia-northeast3 # TODO: update region of the Artifact Registry
-  GKE_CLUSTER: test    # TODO: update to cluster name
+  GKE_CLUSTER: autopilot-cluster-1	    # TODO: update to cluster name
   GKE_ZONE: asia-northeast3   # TODO: update to cluster zone
   DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
   REPOSITORY: test # TODO: update to Artifact Registry docker repository
