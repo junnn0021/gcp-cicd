@@ -7,7 +7,7 @@ COPY ./k8s-petclinic/pom.xml .
 RUN mvn dependency:go-offline
 
 # Downloading the source code and building the application
-RUN git clone https://github.com/junnn0021/k8s-petclinic.git /tmp/petclinic_btc && \
+RUN git clone https://github.com/junnn0021/book-reservation.git /tmp/petclinic_btc && \
     mv /tmp/petclinic_btc/src ./src && \
     rm -rf /tmp/petclinic_btc
 RUN mvn package -P MySQL -DskipTests
